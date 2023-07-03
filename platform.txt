@@ -1,4 +1,4 @@
-name=VEA
+name=ESP32 Arduino
 version=
 
 

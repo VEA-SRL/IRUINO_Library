@@ -1,3 +1,4 @@
+
 menu.CPUFreq=CPU Frequency
 menu.FlashFreq=Flash Frequency
 menu.FlashMode=Flash Mode
@@ -12,7 +13,6 @@ menu.LoRaWanDebugLevel=LoRaWan Debug Level
 ##############################################################
 ### DO NOT PUT BOARDS ABOVE THE OFFICIAL ESPRESSIF BOARDS! ###
 ##############################################################
-
 
 iruino.name=Iruino VEA
 
@@ -89,3 +89,4 @@ iruino.menu.UploadSpeed.460800.macosx=460800
 iruino.menu.UploadSpeed.460800.upload.speed=460800
 iruino.iruino.UploadSpeed.512000.windows=512000
 iruino.menu.UploadSpeed.512000.upload.speed=512000
+
