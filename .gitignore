@@ -14,3 +14,4 @@ tools/mklittlefs
 __vm/
 *.vcxproj*
 .vscode/
+vea.zip
