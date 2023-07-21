@@ -24,11 +24,6 @@
 #include "soc/gpio_struct.h"
 #include "soc/rtc_io_reg.h"
 
-
-
-
-
-
 const int8_t esp32_adc2gpio[20] = {36, 37, 38, 39, 32, 33, 34, 35, -1, -1, 4, 0, 2, 15, 13, 12, 14, 27, 25, 26};
 
 const DRAM_ATTR esp32_gpioMux_t esp32_gpioMux[GPIO_PIN_COUNT]={
@@ -88,19 +83,6 @@ static InterruptHandle_t __pinInterruptHandlers[GPIO_PIN_COUNT] = {0,};
 extern void IRAM_ATTR __pinMode(uint8_t pin, uint8_t mode)
 {
 
-    //forcing input to be a generic input if its requested as pullup/down to avoid short circuit
-    //ff-230630
-    if (pin != 22 && pin != 21){
-        if(mode & INPUT_PULLUP) {
-            mode = INPUT; 
-        } else if(mode & INPUT_PULLDOWN) {
-            mode = INPUT;
-        } 
-        //disable open drain mode
-        if(mode & OPEN_DRAIN) {
-            mode = OUTPUT;
-        }
-    }
     if(!digitalPinIsValid(pin)) {
         return;
     }
@@ -204,113 +186,14 @@ extern void IRAM_ATTR __digitalWrite(uint8_t pin, uint8_t val)
         }
     }
 }
-#define THRESHOLD 2500
 
 extern int IRAM_ATTR __digitalRead(uint8_t pin)
 {
-    if (pin == 22 || pin == 21){
+    if(pin < 32) {
         return (GPIO.in >> pin) & 0x1;
+    } else if(pin < 40) {
+        return (GPIO.in1.val >> (pin - 32)) & 0x1;
     }
-    bool isInOutPin = false;
-    for (size_t i = 0; i < number_of_output_pins; i++)
-    {
-        if (pin == digital_out_pin[i]){    
-            isInOutPin = true;
-            break;
-        }
-    }
-    
-    if (isInOutPin){
-        if (pin<32){
-            return (GPIO.in >> pin) & 0x1;
-        }else{
-            return (GPIO.in1.val >> (pin - 32)) & 0x1;
-        }
-    }else{
-         
-        if(pin == 0){
-            //read as analogical pin because of the pullup of the circuit, if analogRead is less than x return 1 else return 0
-            //if pin is in digital_in_pin array check if it is inverted
-            for (size_t i = 0; i < number_of_input_pins; i++)
-            {
-                if (pin == digital_in_pin[i]){
-                    if (input_inverted[i]){
-                        //swap true and false because of pullup of circuit
-                        if(analogRead(pin) < THRESHOLD){
-                            return 1;
-                        }else{
-                            return 0;
-                        }
-                    }else{
-                        if(analogRead(pin) < THRESHOLD){
-                            return 0;
-                        }else{
-                            return 1;
-                        }
-                    }
-                }
-            }
-            //return because if isn't in array the function go as default
-            return (GPIO.in >> pin) & 0x1;
-            
-            
-        }else if(pin < 32) {
-            //if pin is in digital_in_pin array check if it is inverted
-            for (size_t i = 0; i < number_of_input_pins; i++)
-            {
-                if (pin == digital_in_pin[i]){
-                    if (input_inverted[i]){
-                        //swap true and false because of pullup of circuit
-                        if ((GPIO.in >> pin) & 0x1 ){
-                            return 0;
-                        }else{
-                            return 1;
-                        }
-                    }else{
-                        return (GPIO.in >> pin) & 0x1;
-                    }
-                }
-            }
-            //return because if isn't in array the function go as default
-            return (GPIO.in >> pin) & 0x1;
-            // if (input_inverted[])
-            // //swap true and false because of pullup of circuit
-            // if ((GPIO.in >> pin) & 0x1 ){
-            //     return 0;
-            // }else{
-            //     return 1;
-            // }
-            // // return (GPIO.in >> pin) & 0x1;
-        } else if(pin < 40) {
-            //if pin is in digital_in_pin array check if it is inverted
-            for (size_t i = 0; i < number_of_input_pins; i++)
-            {
-                if (pin == digital_in_pin[i]){
-                    if (input_inverted[i]){
-                        //swap true and false because of pullup of circuit
-                        if ((GPIO.in1.val >> (pin - 32)) & 0x1 ){
-                            return 0;
-                        }else{
-                            return 1;
-                        }
-                    }else{
-                        return (GPIO.in1.val >> (pin - 32)) & 0x1;
-                    }
-                }
-            }
-            //return because if isn't in array the function go as default
-            return (GPIO.in1.val >> (pin - 32)) & 0x1;
-            // //swap true and false because of pullup of circuit
-            // if ((GPIO.in1.val >> (pin - 32)) & 0x1 ){
-            //     return 0;
-            // }else{
-            //     return 1;
-            // }
-            // // return (GPIO.in1.val >> (pin - 32)) & 0x1;
-        }
-    }
-
-    
     return 0;
 }
 
@@ -360,19 +243,6 @@ extern void cleanupFunctional(void* arg);
 
 extern void __attachInterruptFunctionalArg(uint8_t pin, voidFuncPtrArg userFunc, void * arg, int intr_type, bool functional)
 {
-        //invert interrupt type, 1->2, 2->1,3 no touch,4->5, 5->4
-    if (pin != 21 && pin != 22){
-        if (intr_type == 1) {
-            intr_type = 2;
-        } else if (intr_type == 2) {
-            intr_type = 1;
-        } else if (intr_type == 4) {
-            intr_type = 5;
-        } else if (intr_type == 5) {
-            intr_type = 4;
-        }
-    }
-    
     static bool interrupt_initialized = false;
 
     if(!interrupt_initialized) {

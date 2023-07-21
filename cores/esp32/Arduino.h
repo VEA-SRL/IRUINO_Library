@@ -20,8 +20,6 @@
 #ifndef Arduino_h
 #define Arduino_h
 
-#include "pins_arduino.h"
-
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdarg.h>
@@ -40,7 +38,6 @@
 
 #include "stdlib_noniso.h"
 #include "binary.h"
-
 
 #define PI 3.1415926535897932384626433832795
 #define HALF_PI 1.5707963267948966192313216916398
@@ -185,6 +182,6 @@ long random(long);
 #define _min(a,b) ((a)<(b)?(a):(b))
 #define _max(a,b) ((a)>(b)?(a):(b))
 
-
+#include "pins_arduino.h"
 
 #endif /* _ESP32_CORE_ARDUINO_H_ */

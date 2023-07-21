@@ -23,8 +23,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
- 
-#include "pins_arduino.h"
+
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -117,9 +116,5 @@ void initArduino();
 #ifdef __cplusplus
 }
 #endif
-
-extern const uint8_t digital_in_pin[];
-extern const uint8_t digital_out_pin[];
-extern const uint8_t analog_in_pin[];
 
 #endif /* HAL_ESP32_HAL_H_ */
