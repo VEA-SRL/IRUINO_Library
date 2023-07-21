@@ -1,7 +1,7 @@
 {
   "packages": [
     {
-      "name": "esp32",
+      "name": "vea",
       "maintainer": "Espressif Systems",
       "websiteUrl": "https://github.com/espressif/arduino-esp32",
       "Url": "https://dl.espressif.com/dl/package_esp32_index.json",
