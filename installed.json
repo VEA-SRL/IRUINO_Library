@@ -8,7 +8,7 @@
       "email": "hristo@espressif.com",
       "platforms": [
         {
-          "name": "esp32",
+          "name": "vea",
           "architecture": "esp32",
           "version": "1.0.6",
           "deprecated": false,
@@ -31,17 +31,17 @@
           "help": {},
           "toolsDependencies": [
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "xtensa-esp32-elf-gcc",
               "version": "1.22.0-97-gc752ad5-5.2.0"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "esptool_py",
               "version": "3.0.0"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "mkspiffs",
               "version": "0.2.3"
             }

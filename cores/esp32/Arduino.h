@@ -20,6 +20,8 @@
 #ifndef Arduino_h
 #define Arduino_h
 
+#define __riscv
+#define _POSIX_TIMEOUTS
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdarg.h>
