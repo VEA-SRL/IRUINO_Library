@@ -28,7 +28,7 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "vea",
+              "packager": "esp32",
               "name": "xtensa-esp32-elf-gcc",
               "version": "esp-2021r2-patch5-8.4.0"
             },
