@@ -11,7 +11,7 @@
       "platforms": [
         {
           "name": "vea",
-          "architecture": "vea",
+          "architecture": "esp32",
           "version": "1.0.6",
           "category": "Contributed",
           "url": "https://github.com/VEA-SRL/arduino-hw/releases/download/v1.0/vea.zip",
@@ -28,52 +28,52 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "esp32",
+              "packager": "veasrl",
               "name": "xtensa-esp32-elf-gcc",
               "version": "esp-2021r2-patch5-8.4.0"
             },
             {
-              "packager": "esp32",
+              "packager": "veasrl",
               "name": "xtensa-esp32s2-elf-gcc",
               "version": "esp-2021r2-patch5-8.4.0"
             },
             {
-              "packager": "esp32",
+              "packager": "veasrl",
               "name": "xtensa-esp32s3-elf-gcc",
               "version": "esp-2021r2-patch5-8.4.0"
             },
             {
-              "packager": "esp32",
+              "packager": "veasrl",
               "name": "xtensa-esp-elf-gdb",
               "version": "11.2_20220823"
             },
             {
-              "packager": "esp32",
+              "packager": "veasrl",
               "name": "riscv32-esp-elf-gcc",
               "version": "esp-2021r2-patch5-8.4.0"
             },
             {
-              "packager": "esp32",
+              "packager": "veasrl",
               "name": "riscv32-esp-elf-gdb",
               "version": "11.2_20220823"
             },
             {
-              "packager": "esp32",
+              "packager": "veasrl",
               "name": "openocd-esp32",
               "version": "v0.11.0-esp32-20221026"
             },
             {
-              "packager": "esp32",
+              "packager": "veasrl",
               "name": "esptool_py",
               "version": "4.5.1"
             },
             {
-              "packager": "esp32",
+              "packager": "veasrl",
               "name": "mkspiffs",
               "version": "0.2.3"
             },
             {
-              "packager": "esp32",
+              "packager": "veasrl",
               "name": "mklittlefs",
               "version": "3.0.0-gnu12-dc7f933"
             }
@@ -82,7 +82,7 @@
       ],
       "tools": [
         {
-          "packager": "vea",
+          "packager": "veasrl",
           "name": "xtensa-esp32-elf-gcc",
           "version": "1.22.0-97-gc752ad5-5.2.0",
           "systems": [
@@ -131,6 +131,7 @@
           ]
         },
         {
+          "packager": "veasrl",
           "version": "1.22.0-80-g6c4433a-5.2.0",
           "name": "xtensa-esp32-elf-gcc",
           "systems": [
@@ -172,6 +173,7 @@
           ]
         },
         { 
+          "packager": "veasrl",
           "name": "esptool_py",
           "version": "3.0.0",
           "systems": [
@@ -220,6 +222,7 @@
           ]
         },
         {
+          "packager": "veasrl",
           "version": "2.6.1",
           "name": "esptool_py",
           "systems": [
@@ -261,6 +264,7 @@
           ]
         },
         {
+          "packager": "veasrl",
           "version": "2.6.0",
           "name": "esptool_py",
           "systems": [
@@ -302,6 +306,7 @@
           ]
         },
         {
+          "packager": "veasrl",
           "name": "mkspiffs",
           "version": "0.2.3",
           "systems": [
@@ -357,6 +362,7 @@
           ]
         },
         {
+          "packager": "veasrl",
           "version": "2.3.1",
           "name": "esptool",
           "systems": [
