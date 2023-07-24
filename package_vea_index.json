@@ -16,8 +16,8 @@
           "category": "Contributed",
           "url": "https://github.com/VEA-SRL/arduino-hw/releases/download/v1.0/vea.zip",
           "archiveFileName": "vea.zip",
-          "checksum": "SHA-256:73e55c17995eed9805c5c845a73df6aa08cdd681463166884b984a0acfcce9b2",
-          "size": "459534262",
+          "checksum": "SHA-256:d47052d076be8cca4a44c2348ff0ec723709645bca8a1bc0508f8f16687fe511",
+          "size": "459610409",
           "help": {
             "online": ""
           },
@@ -28,52 +28,52 @@
           ],
           "toolsDependencies": [
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "xtensa-esp32-elf-gcc",
               "version": "esp-2021r2-patch5-8.4.0"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "xtensa-esp32s2-elf-gcc",
               "version": "esp-2021r2-patch5-8.4.0"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "xtensa-esp32s3-elf-gcc",
               "version": "esp-2021r2-patch5-8.4.0"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "xtensa-esp-elf-gdb",
               "version": "11.2_20220823"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "riscv32-esp-elf-gcc",
               "version": "esp-2021r2-patch5-8.4.0"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "riscv32-esp-elf-gdb",
               "version": "11.2_20220823"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "openocd-esp32",
               "version": "v0.11.0-esp32-20221026"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "esptool_py",
               "version": "4.5.1"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "mkspiffs",
               "version": "0.2.3"
             },
             {
-              "packager": "esp32",
+              "packager": "vea",
               "name": "mklittlefs",
               "version": "3.0.0-gnu12-dc7f933"
             }
