@@ -3,7 +3,7 @@
     {
       "name": "vea",
       "maintainer": "VEA SRL",
-      "websiteURL": "https://github.com/espressif/arduino-esp32",
+      "websiteURL": "https://github.com/VEA-SRL/arduino-hw/",
       "email": "vea@vea.it",
       "help": {
         "online": "https://vea.it/"
