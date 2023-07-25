@@ -65,7 +65,7 @@
             {
               "packager": "esp32",
               "name": "esptool_py",
-              "version": "4.5.1"
+              "version": "3.0.0"
             },
             {
               "packager": "esp32",
