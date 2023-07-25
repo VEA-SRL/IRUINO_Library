@@ -167,7 +167,7 @@ void initVariant() {}
 
 void init() __attribute__((weak));
 void init() {
-    //init pins
+    //init pins, input, output, and analog pins
     for (int i = 0; i < number_of_input_pins; i++) {
         pinMode(digital_in_pin[i], INPUT);
     }
