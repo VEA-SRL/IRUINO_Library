@@ -13,8 +13,10 @@ Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-
 
 
 ### Installation Instructions
-- Using Arduino IDE Boards Manager (preferred)
-  + [Instructions for Boards Manager](docs/arduino-ide/boards_manager.md)
+- Using Arduino IDE Boards Manager
+  + insert the following link into the Additional Boards Manager URLs field: `https://raw.githubusercontent.com/VEA-SRL/arduino-hw/main/package_vea_index.json`
+  + Open the Boards Manager from the Tools -> Board menu and install "VEA SRL"
+  + Select the "IRUINO" board from the Tools -> Board menu
 
 
 ### Decoding exceptions
