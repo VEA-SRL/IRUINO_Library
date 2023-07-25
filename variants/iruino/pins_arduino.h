@@ -28,6 +28,7 @@ extern const uint8_t digital_out_pin[];
 extern const uint8_t analog_in_pin[];
 extern const uint8_t number_of_input_pins;
 extern const uint8_t number_of_output_pins;
+extern const uint8_t number_of_analog_pins;
 extern const bool input_inverted[];
 
 static const uint8_t I0    = 0;

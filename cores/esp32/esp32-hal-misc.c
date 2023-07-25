@@ -166,7 +166,22 @@ void initVariant() __attribute__((weak));
 void initVariant() {}
 
 void init() __attribute__((weak));
-void init() {}
+void init() {
+    //init pins
+    for (int i = 0; i < number_of_input_pins; i++) {
+        pinMode(digital_in_pin[i], INPUT);
+    }
+
+    for (int i = 0; i < number_of_analog_pins; i++) {
+        pinMode(analog_in_pin[i], INPUT);
+    }
+    
+    for (int i = 0; i < number_of_output_pins; i++) {
+        pinMode(digital_out_pin[i], OUTPUT);
+        digitalWrite(digital_out_pin[i], LOW);
+    }
+
+}
 
 bool verifyOta() __attribute__((weak));
 bool verifyOta() { return true; }

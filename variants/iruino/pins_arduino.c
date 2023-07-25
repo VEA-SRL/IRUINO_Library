@@ -6,4 +6,5 @@ const uint8_t digital_out_pin[] = {2, 12, 17, 18, 19, 23, 25, 26};
 const uint8_t analog_in_pin[] = {4, 13};
 const uint8_t number_of_input_pins = 8;
 const uint8_t number_of_output_pins = 8;
+const uint8_t number_of_analog_pins = 2;
 const bool input_inverted[] = {true, true, true, true, true, true, true, true};
