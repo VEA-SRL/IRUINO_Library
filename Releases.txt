@@ -1,0 +1,12 @@
+Include only these files in releases
+-cores/*
+-libraries/*
+-tools/*
+-variants/*
+-boards.txt
+-CMakeLists.txt
+-component.mk
+-installed.json
+-package.json
+-platform.txt
+-programmers.txt
