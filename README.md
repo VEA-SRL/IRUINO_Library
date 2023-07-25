@@ -17,7 +17,7 @@ Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-
   + insert the following links into the Additional Boards Manager URLs field: 
     - `https://raw.githubusercontent.com/VEA-SRL/arduino-hw/main/package_vea_index.json` 
     - `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
-  + Open the Boards Manager from the Tools -> Board menu and install "VEA SRL"
+  + Open the Boards Manager from the Tools -> Board menu and install "vea", by "VEA SRL"
   + Select the "IRUINO" board from the Tools -> Board menu
 
 
