@@ -1,16 +1,16 @@
-# Arduino core for the ESP32
-[![Build Status](https://travis-ci.org/espressif/arduino-esp32.svg?branch=master)](https://travis-ci.org/espressif/arduino-esp32) ![](https://github.com/espressif/arduino-esp32/workflows/ESP32%20Arduino%20CI/badge.svg)
+# Arduino core for the IRUINO
+
 
 ## Contents
 - [Development Status](#development-status)
 - [Installation Instructions](#installation-instructions)
 - [Decoding Exceptions](#decoding-exceptions)
 - [Issue/Bug report template](#issuebug-report-template)
-- [ESP32Dev Board PINMAP](#esp32dev-board-pinmap)
+
 
 ### Development Status
 
-Latest Stable Release  [![Release Version](https://img.shields.io/github/release/espressif/arduino-esp32.svg?style=plastic)](https://github.com/espressif/arduino-esp32/releases/latest/) [![Release Date](https://img.shields.io/github/release-date/espressif/arduino-esp32.svg?style=plastic)](https://github.com/espressif/arduino-esp32/releases/latest/) 
+Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-v1.0-33cc33?link=https://github.com/VEA-SRL/arduino-hw/releases/tag/v1.0&style=plastic)]
 
 
 ### Installation Instructions
