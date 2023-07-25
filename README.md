@@ -10,7 +10,7 @@
 
 ### Development Status
 
-Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-v1.0-33cc33?link=https://github.com/VEA-SRL/arduino-hw/releases/tag/v1.0&style=plastic)](https://github.com/espressif/arduino-esp32/releases/latest/) 
+Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-v1.0-33cc33?style=plastic)](link=https://github.com/VEA-SRL/arduino-hw/releases/tag/v1.0) 
 
 
 ### Installation Instructions
