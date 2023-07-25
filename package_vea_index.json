@@ -30,7 +30,7 @@
             {
               "packager": "esp32",
               "name": "xtensa-esp32-elf-gcc",
-              "version": "esp-2021r2-patch5-8.4.0"
+              "version": "1.22.0-97-gc752ad5-5.2.0"
             },
             {
               "packager": "esp32",
