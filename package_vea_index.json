@@ -4,9 +4,9 @@
       "name": "vea",
       "maintainer": "VEA SRL",
       "websiteURL": "https://github.com/espressif/arduino-esp32",
-      "email": "hristo@espressif.com",
+      "email": "vea@vea.it",
       "help": {
-        "online": "http://esp32.com"
+        "online": "https://vea.it/"
       },
       "platforms": [
         {
