@@ -173,10 +173,26 @@ void Display::manageDisplay()
             }
         }
 
-        
 
-        writeOnDisplay(secondRow.alignment, 2, displayData.fontWidth, displayData.fontHeight, secondRow.text.c_str(), secondRow.inverted,secondRow.textSize,secondRow.column,true,secondRow.xCorrection,secondRow.yCorrection);
-        writeOnDisplay(thirdRow.alignment, 3, displayData.fontWidth, displayData.fontHeight, thirdRow.text.c_str(), thirdRow.inverted,thirdRow.textSize,thirdRow.column,true,thirdRow.xCorrection,thirdRow.yCorrection);
+        if (secondRow.text != "")
+        {
+            writeOnDisplay(Center, 2, displayData.fontWidth, displayData.fontHeight, secondRow.text.c_str(), secondRow.inverted,secondRow.textSize,secondRow.column,true,secondRow.xCorrection,secondRow.yCorrection);
+        }else{
+            writeOnDisplay(Center, 2, displayData.fontWidth, displayData.fontHeight, "IRUINO", false, 1, 0, false, 5, 0);
+        }
+        if (thirdRow.text != "")
+        {
+            writeOnDisplay(Center, 3, displayData.fontWidth, displayData.fontHeight, thirdRow.text.c_str(), thirdRow.inverted,thirdRow.textSize,thirdRow.column,true,thirdRow.xCorrection,thirdRow.yCorrection);
+        }else{
+            float analog0 = analogRead(A0) * 10 / 4095 * 1000;
+            float analog1 = analogRead(A1) * 10 / 4095 * 1000;
+            char analogString0[6];  // Allocate a buffer for the string
+            char analogString1[6];  // Allocate a buffer for the string
+            sprintf(analogString0, "%05d", (int)analog0);
+            sprintf(analogString1, "%05d", (int)analog1);  // Format the string with leading zeros
+            writeOnDisplay(Left, 3, displayData.fontWidth, displayData.fontHeight, analogString0, false, 1, 0, false, 0, 0);
+            writeOnDisplay(Right, 3, displayData.fontWidth, displayData.fontHeight, analogString1, false, 1, 0, false, 5,0);
+        }
         
         //update screen
         display.display();
