@@ -1,7 +1,7 @@
 {
   "packages": [
     {
-      "name": "vea",
+      "name": "iruino",
       "maintainer": "VEA SRL",
       "websiteURL": "https://github.com/VEA-SRL/IRUINO_Library/",
       "email": "vea@vea.it",
@@ -10,14 +10,14 @@
       },
       "platforms": [
         {
-          "name": "vea",
+          "name": "iruino",
           "architecture": "esp32",
           "version": "1.0",
           "category": "Contributed",
-          "url": "https://github.com/VEA-SRL/IRUINO_Library/releases/download/v1.0/vea.zip",
-          "archiveFileName": "vea.zip",
-          "checksum": "SHA-256:ab4638f0b13eec55b476e159f2d9e903929ca34153884b132cb4e986c7bb42ed",
-          "size": "459543895",
+          "url": "https://github.com/VEA-SRL/IRUINO_Library/releases/download/v1.0/iruino v1.0.zip",
+          "archiveFileName": "iruino v1.0.zip",
+          "checksum": "SHA-256:fa1838826c1993644d7975804397838271570e0ee4d19ec7a0d3f3bdcfacf030",
+          "size": "459740625",
           "help": {
             "online": ""
           },
