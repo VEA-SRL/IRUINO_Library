@@ -184,14 +184,14 @@ void Display::manageDisplay()
         {
             writeOnDisplay(Center, 3, displayData.fontWidth, displayData.fontHeight, thirdRow.text.c_str(), thirdRow.inverted,thirdRow.textSize,thirdRow.column,true,thirdRow.xCorrection,thirdRow.yCorrection);
         }else{
-            float analog0 = analogRead(A0) * 10 / 4095 * 1000;
-            float analog1 = analogRead(A1) * 10 / 4095 * 1000;
+            float analog0 = analogRead(A0) * 10.0 / 4095.0;
+            float analog1 = analogRead(A1) * 10.0 / 4095.0;
             char analogString0[6];  // Allocate a buffer for the string
             char analogString1[6];  // Allocate a buffer for the string
-            sprintf(analogString0, "%05d", (int)analog0);
-            sprintf(analogString1, "%05d", (int)analog1);  // Format the string with leading zeros
+            sprintf(analogString0, "A%02d.%01d", (int)(analog0), (int)(analog0 * 10) % 10);
+            sprintf(analogString1, "B%02d.%01d", (int)(analog1), (int)(analog1 * 10) % 10);  // Format the string with the format "XX.Y"
             writeOnDisplay(Left, 3, displayData.fontWidth, displayData.fontHeight, analogString0, false, 1, 0, false, 0, 0);
-            writeOnDisplay(Right, 3, displayData.fontWidth, displayData.fontHeight, analogString1, false, 1, 0, false, 5,0);
+            writeOnDisplay(Right, 3, displayData.fontWidth, displayData.fontHeight, analogString1, false, 1, 0, false, 7, 0);
         }
         
         //update screen
