@@ -83,7 +83,11 @@ class Display{
 
     public:
         //constructor
-        Display():displayThread(DisplayLoop, true, 50, 2)
+        /*the core on which the thread will run is the other one of the one on which
+            the main loop runs, the main loop run over the core 1, so the thread will
+             run over the core 1, defined in main.cpp with priority 1 
+        */
+        Display():displayThread(DisplayLoop, true, 0, 2, "displayThread", 0)
                   {displayThread.run();}
         //destructor
         ~Display(){}
