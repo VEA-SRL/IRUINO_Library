@@ -5,7 +5,7 @@
 - [Development Status](#development-status)
 - [Installation Instructions](#installation-instructions)
 - [Decoding Exceptions](#decoding-exceptions)
-
+- [Capabilities](#capabilities)
 
 ### Development Status
 
@@ -25,3 +25,17 @@ Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-
 
 You can use [EspExceptionDecoder](https://github.com/me-no-dev/EspExceptionDecoder) to get meaningful call trace.
 
+
+### Capabilities
+The Iruino is a board based on ESP32, with a lot of features.
+#### I/O 
+The Iruino has 
+- 8 digital inputs, named `I0, I1, I2, I3, I4, I5, I6, I7`;
+- 8 digital outputs, named `O0, O1, O2, O3, O4, O5, O6, O7`;
+- 2 analog inputs, named `A0, A1`.
+#### Connettivity
+The Iruino has
+- WiFi module, can be configured as AP or STA
+- Bluetooth module, can be configured as BLE or SPP
+#### Display
+The Iruino has a 0.96" OLED display, with 128x64 pixels, connected in i2c to the `SDA, SCL` pins.
