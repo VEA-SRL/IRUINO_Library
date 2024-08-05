@@ -31,7 +31,7 @@ extern const uint8_t number_of_output_pins;
 extern const uint8_t number_of_analog_pins;
 extern const bool input_inverted[];
 
-static const uint8_t I0    = 0;
+static const uint8_t I0    = 16;
 static const uint8_t I1    = 27;
 static const uint8_t I2    = 32;
 static const uint8_t I3    = 5;
@@ -80,22 +80,6 @@ static const uint8_t MOSI  = 23;
 static const uint8_t MISO  = 19;
 static const uint8_t SCK   = 18;
 
-// static const uint8_t A0 = 36;
-// static const uint8_t A3 = 39;
-// static const uint8_t A4 = 32;
-// static const uint8_t A5 = 33;
-// static const uint8_t A6 = 34;
-// static const uint8_t A7 = 35;
-// static const uint8_t A10 = 4;
-// static const uint8_t A11 = 0;
-// static const uint8_t A12 = 2;
-// static const uint8_t A13 = 15;
-// static const uint8_t A14 = 13;
-// static const uint8_t A15 = 12;
-// static const uint8_t A16 = 14;
-// static const uint8_t A17 = 27;
-// static const uint8_t A18 = 25;
-// static const uint8_t A19 = 26;
 #endif /* Pins_Arduino_h */
 
 

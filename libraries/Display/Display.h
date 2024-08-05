@@ -87,7 +87,7 @@ class Display{
             the main loop runs, the main loop run over the core 1, so the thread will
              run over the core 1, defined in main.cpp with priority 1 
         */
-        Display():displayThread(DisplayLoop, true, 0, 2, "displayThread", 0)
+        Display():displayThread(DisplayLoop, true, 0, 2, "displayThread")
                   {displayThread.run();}
         //destructor
         ~Display(){}

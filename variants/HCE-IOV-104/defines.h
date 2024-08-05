@@ -1,0 +1,10 @@
+#ifndef DEFINES_H
+#define DEFINES_H
+
+
+#define MAX_ANALOG_VOLTAGE 10.0
+#define MAX_ANALOG_READ 4095.0
+
+#define PRODCODE "HCE-IOV-104"
+
+#endif // DEFINES_H

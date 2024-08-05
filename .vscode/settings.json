@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.tcc": "cpp",
+    "rope": "cpp",
+    "future": "cpp",
+    "istream": "cpp",
+    "ostream": "cpp",
+    "typeinfo": "cpp",
+    "esp32-hal.h": "c"
+  }
+}

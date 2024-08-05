@@ -228,37 +228,13 @@ extern int IRAM_ATTR __digitalRead(uint8_t pin)
         }
     }else{
 
-        if(pin == 0){
-            //read as analogical pin because of the pullup of the circuit, if analogRead is less than x return 1 else return 0
+        if(pin < 32) {
             //if pin is in digital_in_pin array check if it is inverted
             for (size_t i = 0; i < number_of_input_pins; i++)
             {
                 if (pin == digital_in_pin[i]){
-                    if (input_inverted[i]){
-                        //swap true and false because of pullup of circuit
-                        if(analogRead(pin) < THRESHOLD){
-                            return 1;
-                        }else{
-                            return 0;
-                        }
-                    }else{
-                        if(analogRead(pin) < THRESHOLD){
-                            return 0;
-                        }else{
-                            return 1;
-                        }
-                    }
-                }
-            }
-            //return because if isn't in array the function go as default
-            return (GPIO.in >> pin) & 0x1;
 
 
-        }else if(pin < 32) {
-            //if pin is in digital_in_pin array check if it is inverted
-            for (size_t i = 0; i < number_of_input_pins; i++)
-            {
-                if (pin == digital_in_pin[i]){
                     if (input_inverted[i]){
                         //swap true and false because of pullup of circuit
                         if ((GPIO.in >> pin) & 0x1 ){

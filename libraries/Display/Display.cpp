@@ -178,14 +178,14 @@ void Display::manageDisplay()
         {
             writeOnDisplay(Center, 2, displayData.fontWidth, displayData.fontHeight, secondRow.text.c_str(), secondRow.inverted,secondRow.textSize,secondRow.column,true,secondRow.xCorrection,secondRow.yCorrection);
         }else{
-            writeOnDisplay(Center, 2, displayData.fontWidth, displayData.fontHeight, "IRUINO", false, 1, 0, false, 5, 0);
+            writeOnDisplay(Center, 2, displayData.fontWidth, displayData.fontHeight, PRODCODE, false, 1, 0, false, 5, 0);
         }
         if (thirdRow.text != "")
         {
             writeOnDisplay(Center, 3, displayData.fontWidth, displayData.fontHeight, thirdRow.text.c_str(), thirdRow.inverted,thirdRow.textSize,thirdRow.column,true,thirdRow.xCorrection,thirdRow.yCorrection);
         }else{
-            float analog0 = analogRead(A0) * 10.0 / 4095.0;
-            float analog1 = analogRead(A1) * 10.0 / 4095.0;
+            float analog0 = analogRead(A0) * MAX_ANALOG_VOLTAGE / MAX_ANALOG_READ;
+            float analog1 = analogRead(A1) * MAX_ANALOG_VOLTAGE / MAX_ANALOG_READ;
             char analogString0[6];  // Allocate a buffer for the string
             char analogString1[6];  // Allocate a buffer for the string
             sprintf(analogString0, "A%02d.%01d", (int)(analog0), (int)(analog0 * 10) % 10);
