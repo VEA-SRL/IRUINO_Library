@@ -2,7 +2,7 @@
   "packages": [
     {
       "name": "iruino",
-      "maintainer": "IRUINO",
+      "maintainer": "VEA SRL",
       "websiteURL": "https://github.com/VEA-SRL/IRUINO_Library/",
       "email": "vea@vea.it",
       "help": {
@@ -10,7 +10,7 @@
       },
       "platforms": [
         {
-          "name": "HCE-IOV-104",
+          "name": "IRUINO",
           "architecture": "esp32",
           "version": "1.0",
           "category": "Contributed",
