@@ -1,4 +1,4 @@
-name=VEA SRL
+name=IRUINO
 version=1.0.6
 
 
