@@ -14,10 +14,10 @@
           "architecture": "esp32",
           "version": "1.1",
           "category": "Contributed",
-          "url": "https://github.com/VEA-SRL/IRUINO_Library/releases/download/v1.0/iruino.v1.0.zip",
-          "archiveFileName": "iruino.v1.0.zip",
-          "checksum": "SHA-256:28eac166533c32e418523cfcce98165ee76ae0c724a1c459e80720814a95b237",
-          "size": "459740646",
+          "url": "https://github.com/VEA-SRL/IRUINO_Library/releases/download/v1.1/v1.1.zip",
+          "archiveFileName": "v1.1.zip",
+          "checksum": "SHA-256:c7eeea22b4ad68603125590fdb2184a6",
+          "size": "454387109",
           "help": {
             "online": ""
           },
