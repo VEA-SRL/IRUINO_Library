@@ -9,7 +9,7 @@
 
 ### Development Status
 
-Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-v1.0-33cc33?style=plastic)](https://github.com/VEA-SRL/arduino-hw/releases/tag/v1.0) 
+Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-v1.0-33cc33?style=plastic)](https://github.com/VEA-SRL/arduino-hw/releases/tag/v1.1) 
 
 
 ### Installation Instructions
@@ -19,6 +19,7 @@ Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-
     - `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
   + Open the Boards Manager from the Tools -> Board menu and install "iruino", by "VEA SRL"
   + Select the "IRUINO" board from the Tools -> Board menu
+  + Select the product you need, for example "HCE-IOV-104"
 
 
 ### Decoding exceptions
