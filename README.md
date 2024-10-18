@@ -9,7 +9,7 @@
 
 ### Development Status
 
-Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-v1.0-33cc33?style=plastic)](https://github.com/VEA-SRL/arduino-hw/releases/tag/v1.1) 
+Latest Stable Release  [![Release Version](https://img.shields.io/badge/release-v1.2-33cc33?style=plastic)](https://github.com/VEA-SRL/arduino-hw/releases/tag/v1.2) 
 
 
 ### Installation Instructions
